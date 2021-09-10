@@ -1,0 +1,23 @@
+#!/bin/bash
+# Launches an instance of polybar
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+# Define the configuration file that Polybar will use
+config_file="$HOME/.config/polybar/config.ini"
+external_config_file="$HOME/.config/polybar/external/external_config.ini"
+config_file_single_monitor="$HOME/.config/polybar/old-config.ini"
+
+# Launch bar 'main'.
+
+# Launch External monitor bar
+if [[ $(xrandr --query | grep 'DVI') = *connected* ]]; then
+    polybar external -c $external_config_file -r 2>$HOME/bin/polybar/logfile_external &
+    polybar bottombar -c $config_file -r 2>$HOME/bin/polybar/logfile &
+else
+    polybar bottombar -c $config_file_single_monitor -r 2>$HOME/bin/polybar/logfile & 
+fi

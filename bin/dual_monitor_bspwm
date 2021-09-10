@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# set up the two monitors for bspwm
+# NOTE This is a simplistic approach because I alredy the settings I
+# want to apply.
+external_monitor=$(xrandr --query | grep 'DVI')
+if [[ $external_monitor = *connected* ]]; then
+    xrandr --output VGA-0 --primary --mode 1360x768 --output DVI-D-0 --mode 1280x1024 --right-of VGA-0
+fi

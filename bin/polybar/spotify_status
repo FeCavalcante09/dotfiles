@@ -1,0 +1,41 @@
+#!/bin/sh
+
+player=$(playerctl -l | grep -i spotify)
+info_string="Nothing playing.."
+MAX=40
+read cursor < ~/bin/polybar/var.txt
+
+if [ -n "$player" ]; then
+	status=$(playerctl --player=$player status)
+
+	if [ "$status" = "Playing" ]; then
+		artist=$(playerctl --player=$player metadata artist)
+		title=$(playerctl --player=$player metadata title)
+		info_string="$title - $artist"
+	fi
+fi
+
+len=${#info_string}
+
+if [[ $len -gt $MAX ]];then    
+    info_string="$info_string  |  "
+
+    len=${#info_string}
+    offset=$(( $len - $MAX ))
+
+    if [[ $cursor -eq $(( $len - 1 )) ]];then cursor=0;fi
+    sleep 0.1
+    if [[ $cursor -lt $offset ]];then
+        size=$(( $cursor + $MAX ))
+        echo "${info_string:$cursor:$size}"
+    else
+        size=$(( $cursor + $MAX ))
+        echo "${info_string:$cursor}${info_string:0:$(( $cursor - $offset ))}"
+        # buffer=${buffer/'~'/'%{F#00f5d4}'} Change color, substitute pattern
+    fi
+    cursor=$(( $cursor + 1 ))
+else
+    echo "${info_string}"
+fi
+
+echo $cursor > ~/bin/polybar/var.txt

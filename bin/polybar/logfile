@@ -1,0 +1,7 @@
+polybar|notice:  Parsing config file: /home/felipe/.config/polybar/config.ini
+polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_00_1b.0.analog-stereo
+polybar|notice:  Loaded font "Fantasque Sans Mono:style=Regular:pixelsize=13" (name=Fantasque Sans Mono, offset=3, file=/usr/share/fonts/OTF/FantasqueSansMono-Regular.otf)
+polybar|notice:  Loaded font "Fantasque Sans Mono:style=Bold:pixelsize=13" (name=Fantasque Sans Mono, offset=3, file=/usr/share/fonts/OTF/FantasqueSansMono-Bold.otf)
+polybar|notice:  Loaded font "JetbrainsMono Nerd Font Mono:style=Regular:pixelsize=20" (name=JetBrainsMono Nerd Font Mono, offset=5, file=/usr/share/fonts/TTF/JetBrains Mono Regular Nerd Font Complete Mono.ttf)
+polybar|notice:  Loaded font "Noto Sans Mono CJK JP:style=Regular:pixelsize=13" (name=Noto Sans Mono CJK JP, offset=3, file=/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc)
+polybar|notice:  Loaded font "Symbola:style=Regular:pixelsize=18" (name=Symbola, offset=5, file=/usr/share/fonts/OTF/Symbola.otf)

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+player=$(playerctl -l | grep -i spotify)
+info_string=" "
+max_echo_size=50
+
+if [ -n "$player" ]; then
+	status=$(playerctl --player=$player status)
+
+	if [ "$status" = "Playing" ]; then
+		artist=$(playerctl --player=$player metadata artist)
+		title=$(playerctl --player=$player metadata title)
+		info_string="$title - %{F#4cb4f5}$artist"
+	fi
+fi
+
+
+
+if [ info_string > $max_echo_size ]; then
+    offset=$(expr ${#info_string} - $max_echo_size)
+    for ((i=0; i<offset; i++)); do
+        end=$i+$max_echo_size
+        echo "${info_string:i:end}"
+        sleep 1
+    done
+else
+    echo "$info_string"
+fi
+

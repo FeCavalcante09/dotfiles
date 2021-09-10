@@ -1,0 +1,45 @@
+
+#!/usr/bin/sh
+
+# Edit files
+alias zshrc="nvim $HOME/.zshrc"
+alias aliasrc="nvim $HOME/.config/aliasrc"
+alias initivim="nvim $HOME/.config/nvim/init.vim"
+# Remaining storage
+alias storage="df -h / --output=avail | tail -1 | xargs echo | sed 's/G/ GB/g'"
+
+# Same as cat, but with syntax highlighting.
+# Output is automatically piped to less if the text doesn't fit the terminal.
+alias cat="bat -p"
+
+# Color 'ls' output and group directories.
+alias ls="exa -l --color=always --group-directories-first"
+alias la="exa -la --color=always --group-directories-first"
+
+# A search tool that combines the usability of ag with the raw speed of grep.
+alias grep="rg"
+
+# Color ip output
+alias ip='ip -color=auto'
+
+# Color yay and pacman output
+alias yay="yay --color=always"
+alias pacman="pacman --color=always"
+
+# Some programs
+alias nv="nvim"
+alias v="vim"
+alias feh="feh -F -Z"
+
+# Git aliases
+alias \
+    gs="git status" \
+    gd="git diff"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -v" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkdir="mkdir -pv"
+
