@@ -79,7 +79,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
 " Indent guide
-set colorcolumn=80
+" set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 

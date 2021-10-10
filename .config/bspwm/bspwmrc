@@ -61,7 +61,7 @@ bspc config gapless_monocle      true
 
 bspc rule -a firefox desktop=I follow=on focus=on 
 # bspc rule -a Spotify desktop='^2'
-bspc config external_rules_command ~/bin/bspwm/external-spotify-rule
+bspc config external_rules_command ~/bin/bspwm/external-rule
 # bspc rule -a Joplin desktop=IV follow=off
 # bspc rule -a gammy state=floating
 # bspc rule -a kitty -o desktop=III

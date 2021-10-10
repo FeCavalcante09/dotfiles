@@ -3,7 +3,10 @@
 player=$(playerctl -ls | grep -i spotify)
 info_string="Nothing playing..."
 MAX=40
-read cursor < ~/bin/polybar/var.txt
+
+
+
+read cursor < ~/bin/bspwm/cursor.txt
 
 if [ -n "$player" ]; then
 	status=$(playerctl --player=$player status)
@@ -19,19 +22,19 @@ len=${#info_string}
 
 if [[ $len -gt $MAX ]];then    
     info_string="$info_string     "
-    
+
     len=${#info_string}
     offset=$(( $len - $MAX ))
 
-    if [[ $cursor -ge $(( $len - 1 )) ]];then cursor=0;fi
+    if [[ $cursor -eq $(( $len - 1 )) ]];then cursor=0;fi
     sleep 0.5
     if [[ $cursor -lt $offset ]]; then
 
-        size=$(( $cursor + $MAX ))
-   
+        size=$(( $MAX - 1 ))
+        
         echo ${info_string:$cursor:$MAX}
     else 
-        echo "${info_string:$cursor}${info_string:0:$(( $cursor - $offset ))}"
+        echo "${info_string:$cursor:len}${info_string:0:$(( $cursor - $offset ))}"
     fi
     cursor=$(( $cursor + 1 ))
 else
@@ -39,7 +42,7 @@ else
     echo "${info_string}"
 fi
 
-echo $cursor > ~/bin/polybar/var.txt
+echo $cursor > ~/bin/bspwm/cursor.txt
 
 
 

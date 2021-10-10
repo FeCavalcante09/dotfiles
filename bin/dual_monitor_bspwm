@@ -5,5 +5,5 @@
 # want to apply.
 external_monitor=$(xrandr --query | grep 'DVI')
 if [[ $external_monitor = *connected* ]]; then
-    xrandr --output VGA-0 --primary --mode 1360x768 --output DVI-D-0 --mode 1280x1024 --right-of VGA-0
+    xrandr --output VGA-0 --primary --mode 1920x1080 --output DVI-D-0 --mode 1280x1024 --right-of VGA-0
 fi
