@@ -23,7 +23,7 @@ if [[ $len -gt $MAX ]];then
     len=${#info_string}
     offset=$(( $len - $MAX ))
 
-    if [[ $cursor -ge $(( $len - 1 )) ]];then cursor=0;fi
+    if [[ $cursor -ge $(( $len )) ]];then cursor=0;fi
     sleep 0.5
     if [[ $cursor -lt $offset ]]; then
 

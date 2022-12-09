@@ -1,0 +1,1 @@
+reflector -c Brazil -a 24 --sort rate -p http,https --save /etc/pacman.d/mirrorlist

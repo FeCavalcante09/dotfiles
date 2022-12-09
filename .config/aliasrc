@@ -10,11 +10,11 @@ alias storage="df -h / --output=avail | tail -1 | xargs echo | sed 's/G/ GB/g'"
 
 # Same as cat, but with syntax highlighting.
 # Output is automatically piped to less if the text doesn't fit the terminal.
-alias cat="bat -p"
+alias cat="bat"
 
 # Color 'ls' output and group directories.
-alias ls="exa -l --color=always --group-directories-first"
-alias la="exa -la --color=always --group-directories-first"
+alias ls="exa -l --icons --color=always --group-directories-first"
+alias la="exa -la --icons --color=always --group-directories-first"
 
 # A search tool that combines the usability of ag with the raw speed of grep.
 alias grep="rg"

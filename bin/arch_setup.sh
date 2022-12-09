@@ -93,7 +93,7 @@ aur_packages=(
     spotifywm-git
     
     # Zsh & plugins
-	zsh                         # A very advanced and programmable shell for UNIX.
+    zsh                         # A very advanced and programmable shell for UNIX.
     zsh-autosuggestions         # Fish-like autosuggestions for zsh
     zsh-pure-prompt             # Pretty, minimal and fast ZSH prompt
     zsh-syntax-highlighting     # Fish shell like syntax highlighting for Zsh
@@ -103,13 +103,13 @@ aur_packages=(
     neovim                  # Fork of Vim aiming to improve user experience
     
     # Programming Languages
-    python  # High-level scripting language
-    go      # Core compiler tools for the Go programming language
-    lua     # Powerful lightweight language designed for extending applications
-    perl    # A highly capable, feature-rich programming language
-    rust    # Systems programming language focused on safety, speed and concurrency
-    ruby    # An object-oriented language for quick and easy programming
-    nodejs  # Evented I/O for V8 javascript
+    #python  # High-level scripting language
+    #go      # Core compiler tools for the Go programming language
+    #lua     # Powerful lightweight language designed for extending applications
+    #perl    # A highly capable, feature-rich programming language
+    #rust    # Systems programming language focused on safety, speed and concurrency
+    #ruby    # An object-oriented language for quick and easy programming
+    #nodejs  # Evented I/O for V8 javascript
 )
 
 
@@ -121,7 +121,7 @@ aur_packages_string=$(printf " %s" "${aur_packages[@]}")
 echo $aur_packages_string
 
 # Download packages.
-#sudo pacman -S --needed --noconfirm $packages_string
-#yay -S --needed --noconfirm $aur_packages_string
+# sudo pacman -S --needed --noconfirm $packages_string
+# yay -S --needed --noconfirm $aur_packages_string
 
 echo "Done!"
