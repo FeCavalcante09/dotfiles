@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -theme ~/.config/rofi/sysmenu.rasi \
-    <<< "  Lock|  Suspend|  Logout|  Reboot|  Shutdown")"
+    <<< "󰍁  Lock|󰅐  Suspend|  Logout|  Reboot|  Shutdown")"
 
 case "$MENU" in
   *Lock) betterlockscreen -l ;;

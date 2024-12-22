@@ -9,14 +9,14 @@ packages=(
     xdo                     # Utility for performing actions on windows in X.
 
 	# Audio Packages
-	pulseaudio          # A featureful, general-purpose sound server
-    pulseaudio-alsa     # ALSA Configuration for PulseAudio
-    pavucontrol         # PulseAudio Volume Control
-    pamixer             # Pulseaudio command-line mixer
-    alsa-firmware       # Firmware binaries
-    alsa-lib            # Alternative implementation of Linux sound support
-    alsa-plugins        # Additional ALSA plugins
-    alsa-utils          # Utils for ALSA
+	#pulseaudio          # A featureful, general-purpose sound server
+    #pulseaudio-alsa     # ALSA Configuration for PulseAudio
+    #pavucontrol         # PulseAudio Volume Control
+    #pamixer             # Pulseaudio command-line mixer
+    #alsa-firmware       # Firmware binaries
+    #alsa-lib            # Alternative implementation of Linux sound support
+    #alsa-plugins        # Additional ALSA plugins
+    #alsa-utils          # Utils for ALSA
     gstreamer           # GStreamer framework core library
     gst-plugins-good    # GStreamer framework plugins
     gst-plugins-bad     # GStreamer framework plugins
@@ -28,7 +28,7 @@ packages=(
     #pulseeffects        # Audio Effects for Pulseaudio Applications
     
     # Core programs packages
-    chromium            # Browser built for speed, simplicity, and security
+    #chromium            # Browser built for speed, simplicity, and security
   	xterm               # X Terminal Emulator
   	flameshot			# Screenshot app
   	nitrogen            # Background browser and setter for X windows
@@ -40,7 +40,7 @@ packages=(
     neofetch            # A CLI system information tool that supports displaying images.
    
     # Extra Programs
-	calibre 				# eBook management application 
+	#calibre 				# eBook management application 
     lxappearance			# Feature-rich GTK+ theme switcher of the LXDE DEsktop
     gnome-system-monitor    # View current processes and monitor system state
    
@@ -64,7 +64,7 @@ packages=(
     pacman-contrib      # Contributed scripts and tools for pacman systems
     xsettingsd          # Provides settings to X11 applications 
     # Applet for managing network connections
-    #network-manager-applet   
+    network-manager-applet   
     #gnome-keyring       # Stores passwords and encryption keys
     
 
@@ -76,21 +76,22 @@ aur_packages=(
 #    notable-bin             # The markdown-based note-taking app that doesnt suck
 #    ffmpeg-compat-57        # Compatibility package for ffmpeg.
 #    stremio-beta            # Watch videos, movies, TV series and TV channels
-    spotify                 # A proprietary music streaming service
+    #spotify                 # A proprietary music streaming service
     polybar                 # A fast and easy-to-use status bar
-    simplenote-electron-bin # The simplest way to keep notes
-    pcloud-drive            # pCloud drive. Electron edition.
-    bitwarden-bin           # A secure and free password manager.
+    #simplenote-electron-bin # The simplest way to keep notes
+    #pcloud-drive            # pCloud drive. Electron edition.
+    #bitwarden-bin           # A secure and free password manager.
     
     # Extra Packages
     #joplin 					# Note taking app
+    #inxi						# Hardware Information Utility
     
     #networkmanager-dmenu-git    # Control NetworkManager via dmenu
     #pamac-zsh-completions       # ZSH completions for pamac
 
     # Makes Spotify more friendly to window managers by settings a class name
     # before opening the window.
-    spotifywm-git
+    #spotifywm-git
     
     # Zsh & plugins
     zsh                         # A very advanced and programmable shell for UNIX.
@@ -110,6 +111,7 @@ aur_packages=(
     #rust    # Systems programming language focused on safety, speed and concurrency
     #ruby    # An object-oriented language for quick and easy programming
     #nodejs  # Evented I/O for V8 javascript
+    
 )
 
 
@@ -118,10 +120,12 @@ aur_packages=(
 packages_string=$(printf " %s" "${packages[@]}")
 aur_packages_string=$(printf " %s" "${aur_packages[@]}")
 
+echo $packages_string
+
 echo $aur_packages_string
 
 # Download packages.
-# sudo pacman -S --needed --noconfirm $packages_string
-# yay -S --needed --noconfirm $aur_packages_string
+#sudo pacman -S --needed --noconfirm $packages_string
+#yay -S --needed --noconfirm $aur_packages_string
 
 echo "Done!"

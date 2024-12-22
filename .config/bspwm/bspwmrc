@@ -9,16 +9,15 @@ bspc -r "*"
 sxhkd & 
 
 # Start compositor
-picom -b --config ~/.config/picom.conf 
+picom --backend glx -b --config ~/.config/picom.conf 
 
 # Keyboard Layout
 setxkbmap -model logitech_base -layout br -variant abnt2 &
 
 
 
-# Brightness and Light Filter app: Redshft
-# killall redshift && killall redshift-gtk
-# redshift-gtk -c ~/.config/redshift.conf &
+
+
 
 # Notifications Dunst
 killall dunst
@@ -39,8 +38,8 @@ nitrogen --restore &
 
 
 # ======================== BSPWM ==========================#
-bspc monitor VGA-0 -d I II III IV V
-bspc monitor DVI-D-0 -d VI VII VIII 
+bspc monitor DisplayPort-0 -d I II III IV V
+bspc monitor HDMI-A-0 -d VI VII VIII 
 
 # bspc config focus_follows_pointer true
 
@@ -69,9 +68,9 @@ bspc config external_rules_command ~/bin/bspwm/external-rule
 
 
 # ================== Start-up applications =================== #
-
-# Brightness and Gamma app: Gammy
-gammy & 
+# Brightness and Light Filter app: Redshft
+killall redshift && killall redshift-gtk
+redshift-gtk -l -23.463751:-46.533550 -b 0.9:0.4 -t 6000:2500 -P &
 
 # Screenshot app: Flameshot
 flameshot &

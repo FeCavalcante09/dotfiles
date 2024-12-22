@@ -15,7 +15,7 @@ config_file_single_monitor="$HOME/.config/polybar/old-config.ini"
 # Launch bar 'main'.
 
 # Launch External monitor bar
-if [[ $(xrandr --query | grep 'DVI') = *connected* ]]; then
+if [[ $(xrandr --query | grep 'HDMI') = *connected* ]]; then
     polybar external -c $external_config_file -r 2>$HOME/bin/polybar/logfile_external &
     polybar bottombar -c $config_file -r 2>$HOME/bin/polybar/logfile &
 else

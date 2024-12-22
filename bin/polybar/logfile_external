@@ -1,22 +1,31 @@
 polybar|notice:  Parsing config file: /home/felipe/.config/polybar/external/external_config.ini
-polybar|notice:  Listening for IPC messages (PID: 808)
+polybar|notice:  Listening for IPC messages (PID: 914)
 polybar|notice:  Loading module 'round-left' of type 'custom/text'
+polybar|warn:  The config parameter `module/round-left.content` is deprecated, use `module/round-left.format` instead.
 polybar|notice:  Loading module 'bspwm' of type 'internal/bspwm'
 polybar|notice:  Loading module 'round-right' of type 'custom/text'
+polybar|warn:  The config parameter `module/round-right.content` is deprecated, use `module/round-right.format` instead.
 polybar|notice:  Loading module 'spotify' of type 'custom/script'
 polybar|notice:  Loading module 'pulseaudio' of type 'internal/pulseaudio'
-polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_00_1b.0.analog-stereo
+polybar|notice:  pulseaudio: using default sink 
 polybar|notice:  Loading module 'round-left' of type 'custom/text'
+polybar|warn:  The config parameter `module/round-left.content` is deprecated, use `module/round-left.format` instead.
 polybar|notice:  Loading module 'cpu' of type 'internal/cpu'
 polybar|notice:  Loading module 'round-right' of type 'custom/text'
+polybar|warn:  The config parameter `module/round-right.content` is deprecated, use `module/round-right.format` instead.
 polybar|notice:  Loading module 'date' of type 'internal/date'
 polybar|notice:  Loading module 'round-left' of type 'custom/text'
+polybar|warn:  The config parameter `module/round-left.content` is deprecated, use `module/round-left.format` instead.
 polybar|notice:  Loading module 'time' of type 'internal/date'
 polybar|notice:  Loading module 'round-right' of type 'custom/text'
+polybar|warn:  The config parameter `module/round-right.content` is deprecated, use `module/round-right.format` instead.
 polybar|notice:  Loaded 12 modules
 polybar|notice:  Loaded font "Fantasque Sans Mono:style=Regular:pixelsize=13" (name=Fantasque Sans Mono, offset=3, file=/usr/share/fonts/OTF/FantasqueSansMono-Regular.otf)
 polybar|notice:  Loaded font "Fantasque Sans Mono:style=Bold:pixelsize=13" (name=Fantasque Sans Mono, offset=3, file=/usr/share/fonts/OTF/FantasqueSansMono-Bold.otf)
-polybar|notice:  Loaded font "JetbrainsMono Nerd Font Mono:style=Regular:pixelsize=20" (name=JetBrainsMono Nerd Font Mono, offset=5, file=/usr/share/fonts/TTF/JetBrains Mono Regular Nerd Font Complete Mono.ttf)
+polybar|notice:  Loaded font "JetbrainsMono Nerd Font Mono:style=Regular:pixelsize=20" (name=JetBrainsMono Nerd Font Mono, offset=5, file=/usr/share/fonts/TTF/JetBrainsMonoNerdFontMono-Regular.ttf)
 polybar|notice:  Loaded font "Noto Sans Mono CJK JP:style=Regular:pixelsize=13" (name=Noto Sans Mono CJK JP, offset=3, file=/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc)
-polybar|notice:  Loaded font "Symbola:style=Regular:pixelsize=18" (name=Symbola, offset=5, file=/usr/share/fonts/TTF/Symbola.ttf)
-polybar|notice:  Loaded font "JetbrainsMono Nerd Font Mono:style=Regular:pixelsize=16" (name=JetBrainsMono Nerd Font Mono, offset=4, file=/usr/share/fonts/TTF/JetBrains Mono Regular Nerd Font Complete Mono.ttf)
+polybar|notice:  Loaded font "Symbola:style=Regular:pixelsize=18" (name=Symbola, offset=5, file=/usr/share/fonts/OTF/Symbola.otf)
+polybar|notice:  Loaded font "JetbrainsMono Nerd Font Mono:style=Regular:pixelsize=16" (name=JetBrainsMono Nerd Font Mono, offset=4, file=/usr/share/fonts/TTF/JetBrainsMonoNerdFontMono-Regular.ttf)
+polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_30_00.6.analog-stereo
+polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_30_00.6.analog-stereo
+polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_30_00.6.analog-stereo

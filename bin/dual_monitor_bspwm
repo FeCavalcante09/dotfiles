@@ -3,7 +3,7 @@
 # set up the two monitors for bspwm
 # NOTE This is a simplistic approach because I alredy the settings I
 # want to apply.
-external_monitor=$(xrandr --query | grep 'DVI')
+external_monitor=$(xrandr --query | grep 'HDMI')
 if [[ $external_monitor = *connected* ]]; then
-    xrandr --output VGA-0 --primary --mode 1920x1080 --output DVI-D-0 --mode 1280x1024 --right-of VGA-0
+    xrandr --output DisplayPort-0 --primary --mode 1920x1080 --output HDMI-A-0 --mode 1280x1024 --right-of DisplayPort-0
 fi
